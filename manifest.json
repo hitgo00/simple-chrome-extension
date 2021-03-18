@@ -1,0 +1,22 @@
+{
+  "name": "Simple Chrome Extension",
+  "description": "Chromium is ONN!",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "externally_connectable": {
+    "matches": ["http://localhost:3000/"]
+  },
+  "permissions": [
+    "system.cpu",
+    "system.memory",
+    "system.storage",
+    "system.display",
+    "storage"
+  ]
+}
