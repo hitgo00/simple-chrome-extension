@@ -1,5 +1,3 @@
-// chrome.runtime.onInstalled.addListener(() => {
-// });
 chrome.runtime.onConnectExternal.addListener((port) => {
   let strInfo, cpuInfo, memInfo;
   port.onMessage.addListener((message) => {
