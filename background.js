@@ -1,9 +1,8 @@
 // chrome.runtime.onInstalled.addListener(() => {
 // });
 chrome.runtime.onConnectExternal.addListener((port) => {
-  port.onMessage.addListener(console.log);
   let strInfo, cpuInfo, memInfo;
-  setInterval(() => {
+  port.onMessage.addListener((message) => {
     chrome.system.cpu.getInfo((info) => {
       cpuInfo = info;
     });
@@ -18,5 +17,5 @@ chrome.runtime.onConnectExternal.addListener((port) => {
       cpuInfo,
       memInfo,
     });
-  }, 1000);
+  });
 });
