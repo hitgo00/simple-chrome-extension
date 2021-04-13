@@ -10,7 +10,11 @@
     "default_popup": "popup.html"
   },
   "externally_connectable": {
-    "matches": ["http://localhost:3000/*", "https://telemetry-pwa.vercel.app/*"]
+    "matches": [
+      "http://localhost:3000/*",
+      "https://telemetry-pwa.vercel.app/*",
+      "http://localhost:3001/*"
+    ]
   },
   "permissions": [
     "system.cpu",
